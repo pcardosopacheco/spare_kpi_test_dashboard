@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update KPIs</title>
+    <script>
+        function showLoading() {
+            document.getElementById('loading').style.display = 'block';
+        }
+    </script>
+</head>
+<body onload="showLoading()">
+    <h2>Updating KPI Data...</h2>
+    <div id="loading" style="display:none;">
+        <p>Fetching data, please wait...</p>
+    </div>
+    <div id="kpi-data">
+        <h2>KPI Data Updated</h2>
+        <pre>{{ kpi_data }}</pre>
+    </div>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <h1></h1>
+    <table>
+        <thead>
+            <tr>
+                <th>KPI</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for kpi in kpis %}
+            <tr>
+                <td>{{ kpi.key }}</td>
+                <td>{{ kpi.value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
